@@ -1,12 +1,12 @@
-; ������ϵͳ�ؼ���ȫ��ʹ�ô�д
-; �Զ����źͱ�����ȫ��ʹ��Сд
-; ���ּ�����Ʊ��ȫ��ʹ��Сд
-; ʵ����ϵͳ�ؼ��ֺ����ּ�����Ʋ����ִ�Сд
-; ���Զ����źͱ�����Ҫ���ִ�Сд
+; 本程序系统关键字全部使用大写
+; 自定义标号和变量名全部使用小写
+; 数字及其进制标记全部使用小写
+; 实际上系统关键字和数字及其进制不区分大小写
+; 而自定义标号和变量名要区分大小写
 datas SEGMENT
 	x DD 23
 	y DD -10
-	msg DB "Hello ", "$"
+	msg DB "Hello ", "$" ; $表示字符串结尾
 	info DB "Input your name: ", "$"
 	buf DB 20,0,20 dup("$")
 datas ENDS
@@ -15,10 +15,10 @@ stacks SEGMENT stack
 	DB 128 DUP(0)
 stacks ENDS
 
-puts MACRO string ; �궨�壬����ֻ�����ַ������ַ���,���Բ��Ӳ���
+puts MACRO string ; 宏定义，参数只能用字符或者字符串,可以不加参数
 	LEA DX, string
-	MOV AH, 09h ; ��09h�ƶ���ah�Ĵ���
-	INT 21h	; ����dos���ܣ�21hִָ��ah�Ĵ���ָ�����ܣ����dos���ܱ�
+	MOV AH, 09h ; 将09h移动到ah寄存器
+	INT 21h	; 调用dos功能，21h指执行ah寄存器指定功能，详见dos功能表
 ENDM
 
 gets MACRO buff 
@@ -27,14 +27,14 @@ gets MACRO buff
 	INT 21h
 ENDM
 
-enter MACRO ; ���з�ֹ����
-	MOV DL, 0ah ; ���з�   
+enter MACRO ; 换行防止覆盖
+	MOV DL, 0ah ; 换行符   
 	MOV AH, 02h
 	INT 21h 
 ENDM
 
 codes SEGMENT
-	ASSUME CS:codes,DS:datas,SS:stacks ;ָ������Σ����ݶΣ���ջ��
+	ASSUME CS:codes,DS:datas,SS:stacks ;指定代码段，数据段，堆栈段
 start:
 	MOV AX, stacks
 	MOV SS, AX
