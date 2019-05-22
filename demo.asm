@@ -4,11 +4,14 @@
 ; 实际上系统关键字和数字及其进制不区分大小写
 ; 而自定义标号和变量名要区分大小写
 datas SEGMENT
-	x DD 23
+	x DD 23 ; x, y在本程序中并未使用，仅用于创建4字节变量的示例
 	y DD -10
 	msg DB "Hello ", "$" ; $表示字符串结尾
 	info DB "Input your name: ", "$"
-	buf DB 20,0,20 dup("$")
+	buf DB 20,0,20 dup("$") ; 输入缓冲区
+				; 第一个字节代表总长度
+				; 第二个字节表示实际长度（将由程序自动更新）
+				; n dup(m) 表示创建20个内容为m的字节
 datas ENDS
 
 stacks SEGMENT stack
@@ -27,7 +30,7 @@ gets MACRO buff
 	INT 21h
 ENDM
 
-enter MACRO ; 换行防止覆盖
+enter MACRO ; 换行防止覆盖原本的输出
 	MOV DL, 0ah ; 换行符   
 	MOV AH, 02h
 	INT 21h 
