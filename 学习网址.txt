@@ -1,9 +1,9 @@
-masm»ã±à
+masmæ±‡ç¼–
 https://www.jianshu.com/p/d4b51f55efc4
 
-debug
+debug.exeçš„ä½¿ç”¨
 https://blog.csdn.net/prowill/article/details/78798483
 https://blog.csdn.net/xiongbatianxia30146/article/details/50654643
 
-dos¹¦ÄÜÖ¸Áî
+dosåŠŸèƒ½è¡¨
 https://blog.csdn.net/icurious/article/details/51628343
