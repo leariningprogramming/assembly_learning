@@ -7,3 +7,12 @@ https://blog.csdn.net/xiongbatianxia30146/article/details/50654643
 
 dos功能表
 https://blog.csdn.net/icurious/article/details/51628343
+
+x86汇编指令集
+https://blog.csdn.net/bjbz_cxy/article/details/79467688
+
+可用寄存器
+https://blog.csdn.net/irxlinpw/article/details/11224977
+
+数据传送
+http://bdxnote.blog.163.com/blog/static/8444235201061471038378/
