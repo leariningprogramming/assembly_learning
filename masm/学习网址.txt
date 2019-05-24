@@ -16,3 +16,6 @@ https://blog.csdn.net/irxlinpw/article/details/11224977
 
 数据传送
 http://bdxnote.blog.163.com/blog/static/8444235201061471038378/
+
+变量与标记
+https://blog.csdn.net/wangningyu/article/details/4448573
