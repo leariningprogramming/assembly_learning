@@ -19,3 +19,6 @@ http://bdxnote.blog.163.com/blog/static/8444235201061471038378/
 
 变量与标记
 https://blog.csdn.net/wangningyu/article/details/4448573
+
+Call和Ret
+https://blog.csdn.net/u013218907/article/details/38644877
