@@ -11,7 +11,7 @@ datas SEGMENT
 	buf DB 20,0,20 dup("$") ; 输入缓冲区
 				; 第一个字节代表总长度
 				; 第二个字节表示实际长度（将由程序自动更新）
-				; n dup(m) 表示创建20个内容为m的字节
+				; n dup(m) 表示创建n个内容为m的字节
 datas ENDS
 
 stacks SEGMENT stack
